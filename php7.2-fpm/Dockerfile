@@ -43,4 +43,4 @@ RUN rm -rf /cphalcon
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN rm -rf /root/.cache
 
-CMD ["php-fpm"]
+ENTRYPOINT ["php-fpm"]
