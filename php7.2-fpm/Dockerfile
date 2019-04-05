@@ -42,3 +42,5 @@ RUN curl -sS https://getcomposer.org/installer | php \
 RUN rm -rf /cphalcon
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN rm -rf /root/.cache
+
+CMD ["php-fpm", "-D"]
