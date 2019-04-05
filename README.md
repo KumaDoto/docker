@@ -1,8 +1,8 @@
 # How2Use
-docker pull kumadoto/php:<tagname>
+docker pull kumadoto/php:tagname
 
 ## Dockerfile
-FROM kumadoto/php:<tagname>
+FROM kumadoto/php:tagname
 
 ## Detail
 ### php7.2-fpm
