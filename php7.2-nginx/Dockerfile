@@ -4,4 +4,4 @@ RUN apt update \
     && apt install -y \
     nginx
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["php-fpm","nginx", "-g", "daemon off;"]
