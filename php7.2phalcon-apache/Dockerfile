@@ -65,12 +65,7 @@ RUN set -xe && \
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 
-RUN cp -f /var/www/html/config-default/000-default.conf /etc/apache2/sites-available/000-default.conf && /usr/sbin/a2enmod rewrite && service apache2 restart
-
-RUN cp -f /var/www/html/config-default/config.php /var/www/html/apps/config/config.php
 RUN /usr/local/bin/composer install && /usr/local/bin/composer update && /usr/local/bin/composer dump-autoload
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN rm -rf /root/.cache
-
-CMD ["cron", "-f"]
